@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://vmukhpajye6k"]
+
+[ext_resource type="Shader" path="res://basics/05_grid/grid.gdshader" id="1_1vei3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mq4vf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rb5si"]
+render_priority = 0
+shader = ExtResource("1_1vei3")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_mq4vf")
+surface_material_override/0 = SubResource("ShaderMaterial_rb5si")

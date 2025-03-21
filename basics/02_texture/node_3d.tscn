@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwrpnk8rh3ree"]
+
+[ext_resource type="Shader" path="res://basics/02_texture/texture.gdshader" id="1_e8xqn"]
+[ext_resource type="Texture2D" uid="uid://dj6ailgpdfbym" path="res://basics/02_texture/brick_texture.jpg" id="2_lewxv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_adey6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_42cko"]
+render_priority = 0
+shader = ExtResource("1_e8xqn")
+shader_parameter/my_texture = ExtResource("2_lewxv")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_adey6")
+surface_material_override/0 = SubResource("ShaderMaterial_42cko")

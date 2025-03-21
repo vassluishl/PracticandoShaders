@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnm5l3m5wqu5l"]
+
+[ext_resource type="Shader" path="res://basics/04_light/light.gdshader" id="1_oyuxj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_egnhb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t13lc"]
+render_priority = 0
+shader = ExtResource("1_oyuxj")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_egnhb")
+surface_material_override/0 = SubResource("ShaderMaterial_t13lc")

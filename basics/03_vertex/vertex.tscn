@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://xt6qsm273xu7"]
+
+[ext_resource type="Shader" path="res://basics/03_vertex/vertex.gdshader" id="1_ub3oc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f4ogt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ik7fg"]
+render_priority = 0
+shader = ExtResource("1_ub3oc")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_f4ogt")
+surface_material_override/0 = SubResource("ShaderMaterial_ik7fg")
